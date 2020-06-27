@@ -1,3 +1,3 @@
 # ze.tt-remover
 
-This extension hides ze.tt content on zeit.de.
+This extension for Mozilla Firefox hides ze.tt content on zeit.de.
