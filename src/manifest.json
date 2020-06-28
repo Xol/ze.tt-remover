@@ -1,11 +1,22 @@
 {
   "manifest_version": 2,
   "name": "ze.tt-remover",
+  "version": "0.1.0",
+  "author":"Andre Rother",
   "description": "This extension for Mozilla Firefox hides ze.tt content on zeit.de",
-  "version": "0.0.1",
+  "homepage_url":"https://github.com/Xol/ze.tt-remover/tree/main",
   "icons": {
+    "32": "icons/icon-32.png",
     "64": "icons/icon-64.png",
     "96": "icons/icon-96.png"
+  },
+  "permissions":[
+    "activeTab"
+  ],
+  "browser_action":{
+    "default_icon":"icons/icon-32.png",
+    "default_title":"ze.tt-remover",
+    "default_popup":"popup/control_panel.html"    
   },
   "content_scripts": [
     {

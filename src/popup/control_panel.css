@@ -1,0 +1,45 @@
+html, body {
+  width: 300px;
+  /* height: 150px; */
+  overflow: hidden;
+  color: #1D3557;
+  background-color: #F1FAEE;
+}
+
+body strong {
+  color:#1D3557;
+}
+
+.button {
+  width:120px;
+  height:120px;
+  background-color: #F1FAEE;
+  display: block;
+  max-width: 100%;
+  border: none;
+  color: #E7ECEF;
+  text-align: center;
+  display: inline-block;
+}
+
+.button .svg {
+  scale: 6;
+}
+
+.text-success {
+  color:#1D3557 !important;
+}
+
+.text-warning {
+  color:#E63946 !important;
+}
+
+.main {
+  font-size:14px;
+  
+}
+
+.float {
+  width: 50%;
+  float: left;
+}
