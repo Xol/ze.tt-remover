@@ -6,23 +6,31 @@ html, body {
   padding: 5px;
 }
 
-.button-area {
-  text-align: center;
+.hidden {
+  display: none;
 }
 
-.button {
-  width:120px;
-  height:120px;
-  background-color: #F1FAEE;
-  display: block;
-  max-width: 100%;
-  border: none;
-  color: #E7ECEF;
-  text-align: center;
+.button-wrapper{
+  width:100%;
+  margin-right:10px;
+}
+
+.btn-standard:hover {
+  background-color: #a8dadc;
+}
+
+.btn-standard {
+  width:155px;
+  height:155px;
+  background-color: black;
   display: inline-block;
+  text-align: center;
+  border: none;
+  max-width: 100%;
+  background-color: #F1FAEE;
 }
 
-.button .svg {
+.btn-standard .svg {
   scale: 6;
 }
 

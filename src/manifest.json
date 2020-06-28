@@ -17,15 +17,5 @@
     "default_icon":"icons/icon-32.png",
     "default_title":"ze.tt-remover",
     "default_popup":"popup/control_panel.html"    
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.zeit.de/*"
-      ],
-      "js": [
-        "content_script.js"
-      ]
-    }
-  ]
+  }
 }
