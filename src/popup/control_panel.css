@@ -1,5 +1,5 @@
 html, body {
-  width: 175px;
+  max-width: 175px;
   overflow: hidden;
   color: #457B9D;
   background-color: #F1FAEE;
