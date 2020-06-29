@@ -5,15 +5,13 @@
     
     if(window.hasRun){
         return
+    } else {
+        hideZettContent()
     }
 
     window.hasRun = true
 
-    hideZettContent();
-
     function hideZettContent(){
-        console.log("hide the ze.tt content")
-
         //Find ze.tt main-section on home page
         const zettMainSectionSelection = document.getElementsByClassName(zettMainSectionClass)
         if(zettMainSectionSelection.length > 0){
@@ -35,8 +33,6 @@
     }
 
     function showZettContent(){
-        console.log("show the ze.tt content")
-
         //Find ze.tt main-section on home page
         const zettMainSectionSelection = document.getElementsByClassName(zettMainSectionClass)
         if(zettMainSectionSelection.length > 0){
@@ -57,12 +53,14 @@
         }
     }
 
-
     browser.runtime.onMessage.addListener((message) => {
-        if (message.command === "hide") {
+        console.log("message content: " + message.hideZettContentCommand)
+        if (message.hideZettContentCommand){
+            console.log("zeige ze.tt")
+            showZettContent()   
+        } else {
+            console.log("verstecke ze.tt")
             hideZettContent()
-        }else if (message.command === "show") {
-            showZettContent()
         }
     })
 })()

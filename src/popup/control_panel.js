@@ -1,24 +1,20 @@
-function listenForClicks() {
-    
+function listenForClicks() {    
     document.addEventListener("click", (e) => {
-
         const svgButtonImage = document.getElementById("toggleButtonSvg")
         
-        function hideZettContent(tabs) {
-            svgButtonImage.classList.remove("text-success")
-            svgButtonImage.classList.remove("text-warning")
-            svgButtonImage.classList.add("text-success")
+        function toggleZettContent(tabs){
+            hideZettContent = !hideZettContent;
+            if(hideZettContent){
+                svgButtonImage.classList.remove("text-success")
+                svgButtonImage.classList.remove("text-warning")
+                svgButtonImage.classList.add("text-warning")
+            } else {
+                svgButtonImage.classList.remove("text-success")
+                svgButtonImage.classList.remove("text-warning")
+                svgButtonImage.classList.add("text-success")
+            }
             browser.tabs.sendMessage(tabs[0].id, {
-                command: "hide",
-            })
-        }
-
-        function showZettContent(tabs) {
-            svgButtonImage.classList.remove("text-success")
-            svgButtonImage.classList.remove("text-warning")
-            svgButtonImage.classList.add("text-warning")
-            browser.tabs.sendMessage(tabs[0].id, {
-                command: "show",
+                hideZettContentCommand: hideZettContent
             })
         }
 
@@ -28,17 +24,13 @@ function listenForClicks() {
 
         if(e.target.classList.contains('btn-standard')){
             browser.tabs.query({active: true, currentWindow: true})
-                .then(hideZettContent)
-                .catch(logError)
-        }
-
-        if(e.target.classList.contains('btn-show')){
-            browser.tabs.query({active: true, currentWindow: true})
-                .then(showZettContent)
+                .then(toggleZettContent)
                 .catch(logError)
         }
     })
 }
+
+let hideZettContent = true
 
 function reportExecuteScriptError(err) {
     document.querySelector("#popup-content").classList.add("hidden")
