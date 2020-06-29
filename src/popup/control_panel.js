@@ -26,7 +26,7 @@ function listenForClicks() {
             console.error(`${err.message}`)
         }
 
-        if(e.target.classList.contains('text-success') || e.target.classList.contains('text-warning') || e.target.classList.contains('btn-standard')){
+        if(e.target.classList.contains('btn-standard')){
             browser.tabs.query({active: true, currentWindow: true})
                 .then(hideZettContent)
                 .catch(logError)

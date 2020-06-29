@@ -9,6 +9,8 @@
 
     window.hasRun = true
 
+    hideZettContent();
+
     function hideZettContent(){
         console.log("hide the ze.tt content")
 
