@@ -10,8 +10,9 @@ This extension for Mozilla Firefox hides ze.tt content on [Zeit Online](https://
 4. Click on "This Firefox"
 5. At "Temporary Extensions" click on "Load Temporary Add-on..."
 6. Change the directory to this "ze.tt-remover" repository
-7. Choose one of the files and click "Open"
-8. That's it... go to [Zeit Online](https://www.zeit.de).
+7. Change the directory to src/
+8. Choose one of the files and click "Open"
+9. That's it... go to [Zeit Online](https://www.zeit.de).
 
 If you want to run the addon in a more convenient way, try the [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) command line tool. Just cd to this repository and run `web-ext run`.
 
